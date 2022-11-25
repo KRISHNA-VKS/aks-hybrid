@@ -360,7 +360,8 @@
                 },
                 "parameters": {
                     "nsgId":{
-                        "value": "[variables('networkSecurityGroupsId')]"
+                        "value": "[variables('networkSecurityGroupsId')]",
+                        "defaultValue": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().id, '/providers/Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]"
                     },
                     "virtualNetworkName": {
                         "value": "[variables('virtualNetworkName')]"

@@ -328,7 +328,6 @@
         "publicIpAddressSku": "Basic",
         "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
-        "networkSecurityGroupsId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().id, '/providers/Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]",
         "vmSkuGen1": "[if(equals(parameters('virtualMachineOS'), 'Windows Server 2022'), '2022-datacenter', '2019-datacenter')]",
         "vmSkuGen2": "[if(equals(parameters('virtualMachineOS'), 'Windows Server 2022'), '2022-datacenter-g2', '2019-datacenter-gensecond')]"
     },
@@ -359,9 +358,6 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
-                    "nsgId":{
-                        "value": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().id, '/providers/Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]"
-                    },
                     "virtualNetworkName": {
                         "value": "[variables('virtualNetworkName')]"
                     },
@@ -376,6 +372,9 @@
                     },
                     "location": {
                         "value": "[resourceGroup().location]"
+                    },
+                    "networkSecurityGroupId": {
+                        "value": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
                     }
                 }
             }

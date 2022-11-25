@@ -2,12 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "nsgId": {
-            "type": "string",
-            "metadata": {
-                "description": "Network Security Group ID."
-            }
-        },
         "virtualNetworkName": {
             "type": "string",
             "metadata": {
@@ -37,7 +31,13 @@
             "metadata": {
                 "description": "Location for all resources."
             }
-        }        
+        },
+        "networkSecurityGroupId": {
+            "type": "string",
+            "metadata": {
+                "description": "Location for all resources."
+            }
+        }
     },
     "resources": [
         {
@@ -57,7 +57,7 @@
                         "properties": {
                             "addressPrefix": "[parameters('subnetRange')]",
                             "networkSecurityGroup": {
-                                "id": "[parameters('nsgId')]"
+                                "id": "[parameters('networkSecurityGroupId')]"
                             },
                             "delegations": [],
                             "privateEndpointNetworkPolicies": "Enabled",

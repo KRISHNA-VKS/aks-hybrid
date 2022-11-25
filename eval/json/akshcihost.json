@@ -587,7 +587,7 @@
                 "[resourceId('Microsoft.Compute/virtualMachines/extensions', parameters('virtualMachineName'), 'ConfigureAksHciHost')]"
             ],
             "properties": {
-                "mode": "Incremental",
+                "mode": "Complete",
                 "templateLink": {
                     "uri": "[uri(variables('artifactsLocation'), concat('json/updatevnet.json'))]",
                     "contentVersion": "1.0.0.0"

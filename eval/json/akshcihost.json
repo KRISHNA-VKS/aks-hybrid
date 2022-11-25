@@ -355,7 +355,7 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "uri": "[uri(variables('artifactsLocation'), concat('json/vnet.json'))]",
-                    "contentVersion": "1.0.0.1"
+                    "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
                     "virtualNetworkName": {
@@ -590,7 +590,7 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "uri": "[uri(variables('artifactsLocation'), concat('json/updatevnet.json'))]",
-                    "contentVersion": "1.0.0.1"
+                    "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
                     "virtualNetworkName": {

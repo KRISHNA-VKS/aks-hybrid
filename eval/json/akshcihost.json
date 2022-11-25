@@ -359,6 +359,9 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
+                    "nsgId":{
+                        "value": "[variables('networkSecurityGroupsId')]"
+                    },
                     "virtualNetworkName": {
                         "value": "[variables('virtualNetworkName')]"
                     },
@@ -373,9 +376,6 @@
                     },
                     "location": {
                         "value": "[resourceGroup().location]"
-                    },
-                    "nsgId":{
-                        "value": "[variables('networkSecurityGroupsId')]"
                     }
                 }
             }

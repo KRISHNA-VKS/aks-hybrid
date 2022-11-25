@@ -612,6 +612,9 @@
                     },
                     "location": {
                         "value": "[resourceGroup().location]"
+                    },
+                    "networkSecurityGroupId": {
+                        "value": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
                     }
                 }
             }

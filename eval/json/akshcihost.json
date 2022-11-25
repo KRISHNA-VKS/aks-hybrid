@@ -374,7 +374,7 @@
                     "location": {
                         "value": "[resourceGroup().location]"
                     },
-                    "networkSecurityGroupsId":{
+                    "nsgId":{
                         "value": "[variables('networkSecurityGroupsId')]"
                     }
                 }

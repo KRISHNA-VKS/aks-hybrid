@@ -58,7 +58,10 @@
                             "addressPrefix": "[parameters('subnetRange')]",
                             "networkSecurityGroup": {
                                 "id": "[parameters('nsgId')]"
-                            }
+                            },
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Enabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
                         }
                     }
                 ]

@@ -311,7 +311,7 @@
     },
     "variables": {
         "dataDisksCount": 8,
-        "dscUri": "https://github.com/KRISHNA-VKS/aks-hybrid/blob/main/eval/dsc/akshcihost.zip",
+        "dscUri": "https://raw.githubusercontent.com/KRISHNA-VKS/aks-hybrid/main/eval/dsc/akshcihost.zip",
         "artifactsLocation": "https://raw.githubusercontent.com/KRISHNA-VKS/aks-hybrid/main/eval/",
         "randomGUID": "[substring(uniqueString(subscription().subscriptionId, resourceGroup().id, parameters('virtualMachineName')),0,6)]",
         "dnsNameForPublicIP": "[toLower(concat(parameters('virtualMachineName'), variables('randomGUID')))]",
